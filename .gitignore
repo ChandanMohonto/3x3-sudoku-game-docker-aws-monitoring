@@ -1,0 +1,47 @@
+# Sensitive files - DO NOT COMMIT
+*.pem
+*.key
+*.token
+.env
+*.credentials
+
+# AWS credentials
+aws/*.pem
+aws/*.key
+
+# Git files
+.git/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Claude settings (contains local configuration)
+.claude/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/

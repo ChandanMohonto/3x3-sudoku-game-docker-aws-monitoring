@@ -1,0 +1,7 @@
+# Python dependencies for Sudoku Game
+# This project uses only Python standard library
+# No external dependencies required
+
+# Optional: Add these for future enhancements
+# numpy==1.24.3
+# colorama==0.4.6
