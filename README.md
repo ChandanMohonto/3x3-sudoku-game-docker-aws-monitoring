@@ -15,34 +15,44 @@ This project demonstrates a complete DevOps workflow including:
 ## Features
 
 ### Sudoku Game Features
-- Interactive command-line Sudoku puzzle game
+- **Web-based interface** - Play in your browser
+- **Interactive CLI version** - Terminal-based game
 - Multiple difficulty levels (Easy, Medium, Hard)
 - Auto-generated puzzles with unique solutions
 - Backtracking solver algorithm
-- Hint system
+- Hint system and solution viewer
 - Move tracking and timer
+- Responsive design (works on mobile and desktop)
+- Keyboard support
 
 ### DevOps Features
 - Containerized application with Docker
 - Multi-stage Docker build for optimization
 - Automated deployment to cloud
-- Comprehensive monitoring stack
-- System and container metrics
+- Comprehensive monitoring stack (Prometheus + Grafana)
+- **Alerting system** (Email + Slack notifications)
+- System and container metrics (Node Exporter + cAdvisor)
 - Real-time dashboards
+- Alert management (Alertmanager)
 
 ## Project Structure
 
 ```
 demo-project/
-├── sudoku_game.py              # Main Sudoku game application
+├── app.py                      # Flask web application
+├── sudoku_game.py              # CLI Sudoku game
+├── templates/
+│   └── index.html              # Web interface
 ├── requirements.txt            # Python dependencies
 ├── Dockerfile                  # Docker container configuration
 ├── .dockerignore              # Docker build exclusions
+├── .gitignore                 # Git exclusions
 ├── README.md                  # This file
-├── DOCKER_BUILD_GUIDE.md      # Step-by-step Docker build instructions
+├── DOCKER_BUILD_GUIDE.md      # Docker build instructions
 ├── GHCR_PUSH_GUIDE.md         # GitHub Container Registry guide
-├── AWS_DEPLOYMENT_GUIDE.md    # AWS EC2 deployment instructions
-└── MONITORING_GUIDE.md        # Complete monitoring setup guide
+├── AWS_DEPLOYMENT_GUIDE.md    # AWS EC2 deployment guide
+├── MONITORING_GUIDE.md        # Monitoring setup guide
+└── ALERTING_SETUP_GUIDE.md    # Alerting with Email & Slack
 ```
 
 ## Quick Start
@@ -170,6 +180,16 @@ Each guide provides comprehensive, step-by-step instructions with code examples:
 - Docker Compose setup
 - Performance tuning
 - Troubleshooting
+
+### 📙 [Alerting Setup Guide](ALERTING_SETUP_GUIDE.md) ⭐ NEW!
+- Alertmanager installation and configuration
+- **Slack integration** for real-time notifications
+- **Email alerts** (Gmail configuration)
+- Creating comprehensive alert rules
+- Alert routing and grouping
+- Testing and troubleshooting alerts
+- Best practices for alert management
+- Integration with Grafana
 
 ## Architecture
 
