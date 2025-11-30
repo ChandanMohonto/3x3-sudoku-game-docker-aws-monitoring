@@ -29,21 +29,23 @@ FROM base as final
 COPY --from=dependencies /usr/local/lib/python3.11/site-packages /usr/local/lib/python3.11/site-packages
 
 # Copy application code
+COPY app.py .
 COPY sudoku_game.py .
+COPY templates/ ./templates/
 
-# Make the script executable
-RUN chmod +x sudoku_game.py
+# Make the scripts executable
+RUN chmod +x app.py sudoku_game.py
 
 # Add metadata labels
 LABEL maintainer="your-email@example.com" \
-      description="Interactive Sudoku Puzzle Game" \
-      version="1.0"
+      description="Interactive Sudoku Puzzle Game - Web Version" \
+      version="2.0"
 
-# Expose port (for future web interface if needed)
-EXPOSE 8080
+# Expose port for web interface
+EXPOSE 5000
 
-# Set the entrypoint
-ENTRYPOINT ["python3", "sudoku_game.py"]
+# Set the entrypoint to run Flask app
+ENTRYPOINT ["python3", "app.py"]
 
 # Default command
 CMD []

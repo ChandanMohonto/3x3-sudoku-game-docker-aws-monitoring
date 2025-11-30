@@ -1,6 +1,8 @@
 # Python dependencies for Sudoku Game
-# This project uses only Python standard library
-# No external dependencies required
+
+# Web Framework
+Flask==3.0.0
+Werkzeug==3.0.1
 
 # Optional: Add these for future enhancements
 # numpy==1.24.3
